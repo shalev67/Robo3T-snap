@@ -1,0 +1,28 @@
+name: robo3t-snap
+version: v1.2.1
+summary: Robo 3T
+
+description: |
+  Robo 3T (formerly Robomongo) is the free lightweight GUI for MongoDB enthusiasts.
+  MongoDB GUI with embedded shell.
+
+type: app
+
+confinement: strict
+
+icon: snap/gui/icon.png
+
+grade: stable
+
+architectures: [amd64]
+
+apps:
+    robo3t-snap:
+        command: env LC_ALL=C QT_XKB_CONFIG_ROOT="$SNAP/usr/share/X11/xkb" desktop-launch robo3t
+        plugs: [home, network, network-bind, unity7]
+
+parts:
+    tarball:
+        plugin: dump
+        source: https://download.robomongo.org/1.2.1/linux/robo3t-1.2.1-linux-x86_64-3e50a65.tar.gz
+        after: [desktop-qt5]

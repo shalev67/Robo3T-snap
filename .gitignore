@@ -1,0 +1,7 @@
+.idea/
+parts/
+prime/
+stage/
+snap/.snapcraft
+*.snap
+*tar.bz2
