@@ -22,7 +22,26 @@ apps:
         plugs: [home, network, network-bind, unity7]
 
 parts:
+    desktop-qt5-robo3t:
+        source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+        source-subdir: qt/
+        plugin: make
+        make-parameters: ["FLAVOR=qt5"]
+        build-packages:
+          - qtbase5-dev
+          - dpkg-dev
+        stage-packages:
+          - libxkbcommon0
+          - ttf-ubuntu-font-family
+          - dmz-cursor-theme
+          - light-themes
+          - shared-mime-info
+          - libqt5gui5
+          - libgdk-pixbuf2.0-0
+          - libqt5svg5
+          - locales-all
     tarball:
         plugin: dump
         source: https://download.robomongo.org/1.2.1/linux/robo3t-1.2.1-linux-x86_64-3e50a65.tar.gz
-        after: [desktop-qt5]
+        after: [desktop-qt5-robo3t]
+
