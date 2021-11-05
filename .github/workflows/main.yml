@@ -9,4 +9,4 @@ jobs:
     - uses: actions/checkout@v2
     - uses: snapcore/action-build@v1
       with:
-        - snapcraft-args: --enable-experimental-extensions
+        snapcraft-args: --enable-experimental-extensions
