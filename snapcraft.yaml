@@ -19,7 +19,7 @@ architectures: [amd64]
 
 apps:
     robo3t-snap:
-        command: bin/desktop-launch $SNAP/bin/robo3t
+        command: bin/robo3t
         plugs: 
           - home
           - x11
