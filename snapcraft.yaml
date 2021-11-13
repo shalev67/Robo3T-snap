@@ -1,5 +1,5 @@
 name: robo3t-snap
-version: v1.4.3
+version: v1.4.4
 summary: Robo 3T
 
 description: |
@@ -45,5 +45,5 @@ parts:
           - libcurl3-gnutls
     tarball:
         plugin: dump
-        source: https://github.com/Studio3T/robomongo/releases/download/v1.4.3/robo3t-1.4.3-linux-x86_64-48f7dfd.tar.gz
+        source: https://github.com/Studio3T/robomongo/releases/download/v1.4.4/robo3t-1.4.4-linux-x86_64-e6ac9ec.tar.gz
         after: [desktop-qt5-robo3t]
